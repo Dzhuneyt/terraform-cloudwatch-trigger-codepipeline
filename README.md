@@ -13,11 +13,7 @@ Example usage:
       branch_to_monitor = "develop"
       codecommit_repo_arn = data.aws_codecommit_repository.my_repo.arn
       codepipeline_arn = aws_codepipeline.codepipeline_develop.arn
-      tag = var.tag
-    
-      providers = {
-        aws = aws
-      }
+      tag = "example"
     }
 
 Make sure you point it to existing CodeCommit repos and CodePipeline instances:
