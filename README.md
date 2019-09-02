@@ -8,7 +8,7 @@ If you use this module, make sure [to set `PollForSourceChanges=false`](https://
 Example usage:
 
     module "cloudwatch_triggers_codepipeline" {
-      source = "./cloudwatch-codecommit-trigger-codepipeline"
+      source = "github.com/Dzhuneyt/terraform-cloudwatch-trigger-codepipeline?ref=0.0.1"
       aws_region = "eu-west-1"
       branch_to_monitor = "develop"
       codecommit_repo_arn = data.aws_codecommit_repository.my_repo.arn
