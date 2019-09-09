@@ -1,7 +1,7 @@
 # Listen for activity on the CodeCommit repo and trigger the CodePipeline
 resource "aws_cloudwatch_event_rule" "codecommit_activity" {
-  name = "${var.tag}-codecommit-activity"
-  description = "Detect commits to CodeCommit repo of ${var.tag}"
+  name_prefix = "${var.tag}-${var.branch_to_monitor}-activity"
+  description = "Detect commits to CodeCommit repo of ${var.tag} on branch ${var.branch_to_monitor}"
 
   event_pattern = <<PATTERN
 {
